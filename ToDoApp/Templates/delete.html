@@ -1,0 +1,53 @@
+<style>
+    p{
+        text-align:center;
+        font-size:xx-large;
+        color:maroon;
+    }
+
+    body{
+        background-color: lavender;
+    }
+
+    div{
+        width: 500px;
+        height: 200px;
+        background-color: grey;
+        margin-top: 150px;
+        margin-left: 400px;
+    }
+
+    button{
+
+        height:50px;
+        width: 100px;
+        float:left;
+        margin-top:70px;
+        margin-left: 100px;
+    }
+
+    input[type=submit]{
+        height:50px;
+        width: 100px;
+        margin-left: 100px;
+        float:right;
+        margin-top:70px;
+        margin-right: 100px;
+    }
+
+  
+
+</style>
+<body>
+
+ 
+<p>Are you sure you want to delete "{{item}}"?</p>
+<div>
+    <button><a href="{% url 'list' %}">No</a></button>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <input type="submit" name="Confirm" value="Delete">
+    </form>
+</div>  
+</body>

@@ -1,0 +1,41 @@
+<style>
+    h3{
+        text-align:center;
+        color: maroon;
+        font-size:xx-large;
+    }
+
+    body{
+
+        background-color: lavender;
+    }
+
+    div{
+        width: 500px;
+        height: 200px;
+        background-color: grey;
+        margin-top: 150px;
+        margin-left: 400px;
+    }
+    
+    input[type=submit]{
+        height:50px;
+        width:100px;
+        margin-left: 200px;
+        margin-top: 50px;
+    }
+
+</style>
+
+<body>
+    <h3>Updates</h3>
+
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{form}}
+            
+            <input type="submit" name="Update Task" value="Update">
+        </form>
+    </div>
+</body>
